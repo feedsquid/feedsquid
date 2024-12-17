@@ -10,7 +10,7 @@
 - self-hosted
 - single-user
 - open-source
-- NOT just a RSS reader
+- **NOT** just a RSS reader
 
 ## Key features
 
