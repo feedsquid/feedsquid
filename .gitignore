@@ -1,9 +1,16 @@
-# Devenv
+# Etc
+/_/
+
+# devenv
+/.direnv/
 .devenv*
-devenv.local.nix
 
-# direnv
-.direnv
-
-# pre-commit
-.pre-commit-config.yaml
+# Deno & Node
+node_modules/
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+_fresh/
+fresh.gen.ts

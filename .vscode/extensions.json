@@ -1,8 +1,10 @@
 {
   "recommendations": [
-    "esbenp.prettier-vscode",
     "jnoortheen.nix-ide",
     "mkhl.direnv",
-    "streetsidesoftware.code-spell-checker"
+    "streetsidesoftware.code-spell-checker",
+    "bradlc.vscode-tailwindcss",
+    "fill-labs.dependi",
+    "denoland.vscode-deno"
   ]
 }

@@ -8,11 +8,15 @@
 
   # https://devenv.sh/languages/
   languages = {
-    # https://github.com/cachix/devenv/blob/main/src/modules/languages/nix.nix
     # https://devenv.sh/supported-languages/nix/
     nix = {
       enable = true;
       lsp.package = pkgs.nixd;
+    };
+
+    # https://devenv.sh/supported-languages/deno/
+    deno = {
+      enable = true;
     };
   };
 }

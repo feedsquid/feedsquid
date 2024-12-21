@@ -1,8 +1,14 @@
 {
-  "cSpell.words": ["dogfood", "rBucket"],
-
+  // general
   "editor.formatOnSave": true,
+  "search.exclude": {
+    "**/.git": true,
+    "**/.devenv": true,
+    "**/.direnv": true,
+    "**/node_modules": true
+  },
 
+  // nix
   "nix.formatterPath": "nixfmt",
   "nix.enableLanguageServer": true,
   "nix.serverPath": "nixd",
@@ -10,16 +16,55 @@
     "editor.defaultFormatter": "jnoortheen.nix-ide"
   },
 
+  // Deno
+  "deno.enable": true,
+  "deno.lint": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+
+  // css
+  "css.customData": [
+    ".vscode/tailwind.json"
+  ],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+
+  // markup & markdown
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "denoland.vscode-deno"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "denoland.vscode-deno"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "denoland.vscode-deno"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+
+  // dictionary
+  "cSpell.words": [
+    "developomp",
+    "devenv",
+    "direnv",
+    "nixd",
+    "nixfmt",
+    "pkgs",
+    "rBucket"
+  ]
 }
