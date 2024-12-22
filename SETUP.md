@@ -16,6 +16,7 @@ WIP
 
 [![Deno](https://img.shields.io/badge/deno-222?style=for-the-badge&logo=deno)](https://deno.com/)
 [![Fresh](https://img.shields.io/badge/fresh-222?style=for-the-badge&logo=fresh)](https://fresh.deno.dev/)
+[![Preact](https://img.shields.io/badge/preact-222?style=for-the-badge&logo=preact)](https://preactjs.com/)
 [![Typescript](https://img.shields.io/badge/typescript-222?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/tailwind_css-222?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
 [![Playwright](https://img.shields.io/badge/playwright-222?style=for-the-badge)](https://playwright.dev/)
