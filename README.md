@@ -12,8 +12,8 @@
 [![license](https://img.shields.io/github/license/pointfeed/pointfeed?style=for-the-badge&color=yellow)](./LICENSE)
 
 > [!IMPORTANT]
-> rBucket is in pre-alpha stage of development. Most features are not ready for
-> production or written in the first place.
+> rBucket is in 🚧**pre-alpha**🚧 stage of [software release life cycle][SRLC].
+> Most features are not ready for production or written in the first place.
 
 ## rBucket is ...
 
@@ -28,3 +28,5 @@
 - tag-based organization
 - responsive design
 - full mouse, keyboard, and touch navigation
+
+[SRLC]: https://en.wikipedia.org/wiki/Software_release_life_cycle
