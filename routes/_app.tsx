@@ -9,8 +9,10 @@ export default ({ Component }: PageProps) => {
         <title>rBucket</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body>
-        <Component />
+      <body class="h-screen">
+        <div class="h-full bg-[#020817] text-white">
+          <Component />
+        </div>
       </body>
     </html>
   )
