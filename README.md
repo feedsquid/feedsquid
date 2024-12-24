@@ -8,6 +8,7 @@
 </picture>
 </a>
 
+[![discord server invite](https://dcbadge.limes.pink/api/server/gvKhMuT35v)](https://discord.gg/gvKhMuT35v)
 [![contributing](https://img.shields.io/badge/contributing-yellow?style=for-the-badge)](./CONTRIBUTING.md)
 [![license](https://img.shields.io/github/license/pointfeed/pointfeed?style=for-the-badge&color=yellow)](./LICENSE)
 
