@@ -62,6 +62,7 @@
     "developomp",
     "devenv",
     "direnv",
+    "duckdb",
     "nixd",
     "nixfmt",
     "pkgs",

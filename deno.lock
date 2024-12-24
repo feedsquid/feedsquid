@@ -7,6 +7,8 @@
     "jsr:@std/bytes@^1.0.2": "1.0.4",
     "jsr:@std/encoding@^1.0.5": "1.0.6",
     "jsr:@std/path@^1.0.6": "1.0.8",
+    "npm:@duckdb/node-api@*": "1.1.3-alpha.8",
+    "npm:@duckdb/node-api@^1.1.3-alpha.8": "1.1.3-alpha.8",
     "npm:@preact/signals-core@1.8.0": "1.8.0",
     "npm:@preact/signals@1.3.1": "1.3.1_preact@10.25.3",
     "npm:@t3-oss/env-core@0.11.1": "0.11.1_zod@3.24.1",
@@ -253,6 +255,37 @@
       "dependencies": [
         "@babel/helper-string-parser",
         "@babel/helper-validator-identifier"
+      ]
+    },
+    "@duckdb/node-api@1.1.3-alpha.8": {
+      "integrity": "sha512-2cXV/3X3/ocGIoYVe7GkxIsUfHXlQ0THdC/H22KjSLCTBzhEFGJJpOaYCs9u5K532wxs8ogxK79smZPRab6YRQ==",
+      "dependencies": [
+        "@duckdb/node-bindings"
+      ]
+    },
+    "@duckdb/node-bindings-darwin-arm64@1.1.3-alpha.8": {
+      "integrity": "sha512-AG5335Q2MR1oSpE6y9VZc/NhzlxdINNhMKtSJcf4+YZXnIOQgINHw/IMq3g75Mf7wrar1P+dMiSjWdajm/WVpg=="
+    },
+    "@duckdb/node-bindings-darwin-x64@1.1.3-alpha.8": {
+      "integrity": "sha512-qGOuqgO4Dh8RkDKrQ09L0tXJ/pKAsrfjkuGAhELW7nVmhCpg4TgR78X+heYCdzVMRK8di6om0U5DgMWI0/tbBQ=="
+    },
+    "@duckdb/node-bindings-linux-arm64@1.1.3-alpha.8": {
+      "integrity": "sha512-KXYqqOqFRaQs4C3my13Uc0rNIDv2c+USTK8bQzBkoDjTNZdcktEN4p0/nWtYUgf84VrN5egkPUoMshIOs/EkGw=="
+    },
+    "@duckdb/node-bindings-linux-x64@1.1.3-alpha.8": {
+      "integrity": "sha512-czPOTIneSi3LbONByWpVmJjxJvviL8lt4Lhjpt8JR7tzAngVpRiqeys5hNkNjYcvRBP+RXngv4ZXnlfdgTM6lg=="
+    },
+    "@duckdb/node-bindings-win32-x64@1.1.3-alpha.8": {
+      "integrity": "sha512-Kwg1MHShaIfAkdIo60WUgD+7+KZVcBo3Svbq934o6tCzBXPIpkwB2RDYct/FHiyWoCJ2sW4wglfsYEiftLO1ag=="
+    },
+    "@duckdb/node-bindings@1.1.3-alpha.8": {
+      "integrity": "sha512-Dda0YePuotBtO9CTfI+vX1NAnRNet3LIcoiTpygTME7emjFi8nLYXz+D7UF78+VdaZZ1AODls9i1m6U2Qxcw1g==",
+      "dependencies": [
+        "@duckdb/node-bindings-darwin-arm64",
+        "@duckdb/node-bindings-darwin-x64",
+        "@duckdb/node-bindings-linux-arm64",
+        "@duckdb/node-bindings-linux-x64",
+        "@duckdb/node-bindings-win32-x64"
       ]
     },
     "@isaacs/cliui@8.0.2": {
@@ -2147,6 +2180,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@preact-icons/fa@1.0.12",
+      "npm:@duckdb/node-api@^1.1.3-alpha.8",
       "npm:@preact/signals-core@1.8.0",
       "npm:@preact/signals@1.3.1",
       "npm:@t3-oss/env-core@0.11.1",
