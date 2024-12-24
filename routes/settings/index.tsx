@@ -3,6 +3,8 @@ import { getCookies } from "$std/http/cookie.ts"
 
 import FaArrowLeft from "@preact-icons/fa/FaArrowLeft"
 
+import Versions from "~/routes/settings/(_components)/versions.tsx"
+
 import { env } from "~/env.ts"
 
 export const handler: Handlers = {
@@ -29,6 +31,7 @@ export default () => {
 
       <main class="w-full max-w-5xl mx-auto">
         <a href="/api/auth/signout" class="underline">Logout</a>
+        <Versions />
       </main>
     </>
   )
