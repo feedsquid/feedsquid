@@ -20,11 +20,16 @@ export const handler: Handlers = {
 export default () => {
   return (
     <>
-      <a href="/" class="flex items-center gap-2">
-        <FaArrowLeft /> Back
-      </a>
+      <nav class="flex items-center mx-auto w-full max-w-5xl p-2 gap-2">
+        <a href="/" class="flex items-center p-3 hover:bg-slate-800 rounded">
+          <FaArrowLeft />
+        </a>
+        <h1 class="font-black text-2xl">Settings</h1>
+      </nav>
 
-      <a href="/api/auth/signout">Logout</a>
+      <main class="w-full max-w-5xl mx-auto">
+        <a href="/api/auth/signout" class="underline">Logout</a>
+      </main>
     </>
   )
 }
