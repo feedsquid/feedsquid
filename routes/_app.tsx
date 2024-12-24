@@ -11,7 +11,7 @@ export default ({ Component }: PageProps) => {
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body class="h-screen">
-        <div class="h-full bg-[#020817] text-white">
+        <div class="h-full w-full bg-slate-950 text-white">
           <Component />
         </div>
       </body>
