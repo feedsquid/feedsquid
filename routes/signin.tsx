@@ -1,11 +1,4 @@
-import { type Handlers } from "$fresh/server.ts"
 import { Head } from "$fresh/runtime.ts"
-
-export const handler: Handlers = {
-  GET(_req, ctx) {
-    return ctx.render!()
-  },
-}
 
 export default () => {
   return (
