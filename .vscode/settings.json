@@ -66,6 +66,7 @@
     "nixd",
     "nixfmt",
     "pkgs",
-    "rBucket"
+    "rBucket",
+    "UTINYINT"
   ]
 }
