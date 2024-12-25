@@ -3,6 +3,7 @@ import { getCookies } from "$std/http/cookie.ts"
 import { asset } from "$fresh/runtime.ts"
 import { env } from "~/env.ts"
 
+import FaBookmark from "@preact-icons/fa/FaBookmark"
 import FaCog from "@preact-icons/fa/FaCog"
 import { FeedItem } from "~/components/FeedItem.tsx"
 
@@ -37,8 +38,17 @@ export default () => {
                 class="p-1 rounded"
               />
             </form>
-            <a href="/settings" class="hover:bg-slate-800 p-2 rounded">
-              <FaCog size={24} color="white" />
+            <a
+              href="/settings"
+              class="flex items-center justify-center size-10 rounded hover:bg-slate-800"
+            >
+              <FaBookmark size={16} color="white" />
+            </a>
+            <a
+              href="/settings"
+              class="flex items-center justify-center size-10 rounded hover:bg-slate-800"
+            >
+              <FaCog size={16} color="white" />
             </a>
           </div>
         </div>
