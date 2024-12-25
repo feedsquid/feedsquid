@@ -1,11 +1,10 @@
 import type { Handlers } from "$fresh/server.ts"
-
-import FaCog from "@preact-icons/fa/FaCog"
-
 import { getCookies } from "$std/http/cookie.ts"
 import { asset } from "$fresh/runtime.ts"
-
 import { env } from "~/env.ts"
+
+import FaCog from "@preact-icons/fa/FaCog"
+import { FeedItem } from "~/components/FeedItem.tsx"
 
 export const handler: Handlers = {
   GET(req, ctx) {
@@ -44,7 +43,11 @@ export default () => {
           </div>
         </div>
       </nav>
-      <main class="w-full max-w-5xl mx-auto">
+
+      <main class="w-full max-w-5xl mx-auto mt-12">
+        <FeedItem feedName="name">
+          <div>content</div>
+        </FeedItem>
       </main>
     </>
   )
