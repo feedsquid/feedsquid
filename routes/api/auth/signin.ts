@@ -19,7 +19,7 @@ export const handler: Handlers = {
     const headers = new Headers()
 
     setCookie(headers, {
-      name: "rBucketAuth",
+      name: "feedSquidAuth",
       value: env.PASSWORD, // todo: change to session token
       maxAge: 60 * 60 * 24 * 365, // year
       sameSite: "Lax", // this is important to prevent CSRF attacks

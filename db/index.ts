@@ -9,7 +9,7 @@ export async function initDB() {
   console.debug("initializing DB...")
 
   try {
-    instance = await DuckDBInstance.create("rbucket.duckdb")
+    instance = await DuckDBInstance.create("feedsquid.duckdb")
     connection = await instance.connect()
 
     connection.run(`CREATE TABLE IF NOT EXISTS bookmarks (

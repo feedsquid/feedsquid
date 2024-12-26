@@ -8,7 +8,7 @@ import { env } from "~/env.ts"
 
 export const handler: Handlers = {
   GET(req, ctx) {
-    if (getCookies(req.headers).rBucketAuth !== env.PASSWORD) {
+    if (getCookies(req.headers).feedSquidAuth !== env.PASSWORD) {
       const url = new URL(req.url)
       url.pathname = "/signin"
       return Response.redirect(url)
@@ -22,7 +22,7 @@ export default () => {
   return (
     <>
       <Head>
-        <title>rBucket | Bookmarks</title>
+        <title>feedSquid | Bookmarks</title>
       </Head>
 
       <nav class="flex items-center mx-auto w-full max-w-5xl p-2 gap-2">

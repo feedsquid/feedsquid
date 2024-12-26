@@ -1,4 +1,4 @@
-# Setting up rBucket
+# Setting up feedSquid
 
 ## Introduction
 

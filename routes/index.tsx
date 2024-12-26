@@ -9,7 +9,7 @@ import { FeedItem } from "~/components/FeedItem.tsx"
 
 export const handler: Handlers = {
   GET(req, ctx) {
-    if (getCookies(req.headers).rBucketAuth !== env.PASSWORD) {
+    if (getCookies(req.headers).feedSquidAuth !== env.PASSWORD) {
       const url = new URL(req.url)
       url.pathname = "/signin"
       return Response.redirect(url)
@@ -26,7 +26,7 @@ export default () => {
         <div class="flex items-center justify-between p-2 w-full h-16 max-w-5xl">
           <div class="flex items-center">
             <img width="32" src={asset("/logo.svg")} />
-            <span class="font-black text-2xl">rBucket</span>
+            <span class="font-black text-2xl">feedSquid</span>
           </div>
           <div class="flex items-center gap-3">
             <form>

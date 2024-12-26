@@ -3,7 +3,7 @@ import deps from "~/deno.json" with { type: "json" }
 
 export default () => {
   const versions = {
-    rBucket: deps.version,
+    feedSquid: deps.version,
     DuckDB: duckdb.version().replace("v", ""),
     Fresh: deps.imports["$fresh/"].split("@")[1].replace("/", ""),
     Deno: Deno.version.deno,

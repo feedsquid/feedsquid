@@ -1,4 +1,4 @@
-# rBucket
+# feedSquid
 
 <a href="https://fresh.deno.dev">
 <picture>
@@ -10,13 +10,14 @@
 
 [![discord server invite](https://dcbadge.limes.pink/api/server/gvKhMuT35v)](https://discord.gg/gvKhMuT35v)
 [![contributing](https://img.shields.io/badge/contributing-yellow?style=for-the-badge)](./CONTRIBUTING.md)
-[![license](https://img.shields.io/github/license/pointfeed/pointfeed?style=for-the-badge&color=yellow)](./LICENSE)
+[![license](https://img.shields.io/github/license/feedSquid/feedSquid?style=for-the-badge&color=yellow)](./LICENSE)
 
 > [!IMPORTANT]
-> rBucket is in 🚧**pre-alpha**🚧 stage of [software release life cycle][SRLC].
-> Most features are not ready for production or written in the first place.
+> feedSquid is in 🚧**pre-alpha**🚧 stage of
+> [software release life cycle][SRLC]. Most features are not ready for
+> production or written in the first place.
 
-## rBucket is ...
+## feedSquid is ...
 
 - a feed & bookmark manager
 - self-hosted

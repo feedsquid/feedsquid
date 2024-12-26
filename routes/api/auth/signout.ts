@@ -6,7 +6,7 @@ export const handler: Handlers = {
   GET(req) {
     const url = new URL(req.url)
     const headers = new Headers(req.headers)
-    deleteCookie(headers, "rBucketAuth", { path: "/", domain: url.hostname })
+    deleteCookie(headers, "feedSquidAuth", { path: "/", domain: url.hostname })
 
     headers.set("location", "/")
 
