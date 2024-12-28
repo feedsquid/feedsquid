@@ -12,15 +12,16 @@ interface Props {
 export function FeedItem(
   props: Props & JSX.DetailsHTMLAttributes<HTMLDetailsElement>,
 ) {
+  const { feedName, children, ...detailProps } = props
   return (
     <details
-      {...props}
+      {...detailProps}
       class="group"
     >
       <summary class="flex items-center justify-between p-1 rounded cursor-pointer hover:bg-slate-800">
         <div class="flex items-center">
           <FaChevronRight class="group-open:rotate-90 duration-75 mx-2" />
-          {props.feedName}
+          {feedName}
         </div>
         <div class="flex items-center gap-2">
           <NotificationBadge count={1} />
@@ -32,7 +33,7 @@ export function FeedItem(
           </button>
         </div>
       </summary>
-      {props.children}
+      {children}
     </details>
   )
 }
