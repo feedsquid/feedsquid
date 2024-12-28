@@ -1,8 +1,8 @@
 import type { DuckDBMaterializedResult } from "@duckdb/node-api"
+import type { Result } from "~/util.ts"
 
 import { connection, ID_SIZE } from "~/db/index.ts"
 import { nanoid } from "nanoid"
-import { Result } from "~/util.ts"
 
 export type TagID = string
 
