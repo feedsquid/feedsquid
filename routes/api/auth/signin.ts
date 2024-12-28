@@ -1,6 +1,7 @@
-import { Handlers } from "$fresh/server.ts"
+import type { Handlers } from "$fresh/server.ts"
 
 import { setCookie } from "$std/http/cookie.ts"
+import { HTTPStatus } from "~/util.ts"
 import { env } from "~/env.ts"
 
 export const handler: Handlers = {
@@ -9,11 +10,7 @@ export const handler: Handlers = {
     const form = await req.formData()
 
     if (form.get("password") !== env.PASSWORD) {
-      return new Response(null, {
-        // 403 Forbidden
-        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
-        status: 403,
-      })
+      return new Response(null, { status: HTTPStatus.FORBIDDEN })
     }
 
     const headers = new Headers()
@@ -30,11 +27,6 @@ export const handler: Handlers = {
 
     headers.set("location", "/")
 
-    return new Response(null, {
-      // 303 See Other
-      // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/303
-      status: 303,
-      headers,
-    })
+    return new Response(null, { status: HTTPStatus.SEE_OTHER, headers })
   },
 }

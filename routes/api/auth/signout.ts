@@ -1,6 +1,7 @@
-import { Handlers } from "$fresh/server.ts"
+import type { Handlers } from "$fresh/server.ts"
 
 import { deleteCookie } from "$std/http/cookie.ts"
+import { HTTPStatus } from "~/util.ts"
 
 export const handler: Handlers = {
   GET(req) {
@@ -10,11 +11,6 @@ export const handler: Handlers = {
 
     headers.set("location", "/")
 
-    return new Response(null, {
-      // 302 Found
-      // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302
-      status: 302,
-      headers,
-    })
+    return new Response(null, { status: HTTPStatus.FOUND, headers })
   },
 }

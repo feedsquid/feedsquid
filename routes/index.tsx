@@ -1,9 +1,8 @@
 import type { Handlers } from "$fresh/server.ts"
 import type { JSX } from "preact"
 
-import { getCookies } from "$std/http/cookie.ts"
 import { asset } from "$fresh/runtime.ts"
-import { env } from "~/env.ts"
+import { isAuthed, redirect } from "~/util.ts"
 
 import FaBookmark from "@preact-icons/fa/FaBookmark"
 import FaTag from "@preact-icons/fa/FaTag"
@@ -12,11 +11,7 @@ import { FeedItem } from "~/components/FeedItem.tsx"
 
 export const handler: Handlers = {
   GET(req, ctx) {
-    if (getCookies(req.headers).feedSquidAuth !== env.PASSWORD) {
-      const url = new URL(req.url)
-      url.pathname = "/signin"
-      return Response.redirect(url)
-    }
+    if (!isAuthed(req)) return redirect(req, "/signin")
 
     return ctx.render!()
   },

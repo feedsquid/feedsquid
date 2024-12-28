@@ -1,6 +1,6 @@
-import { Handlers } from "$fresh/server.ts"
-import { getCookies } from "$std/http/cookie.ts"
-import { env } from "~/env.ts"
+import type { Handlers } from "$fresh/server.ts"
+
+import { isAuthed, redirect } from "~/util.ts"
 
 import { Head } from "$fresh/runtime.ts"
 import FaArrowLeft from "@preact-icons/fa/FaArrowLeft"
@@ -11,11 +11,7 @@ import Debug from "~/routes/settings/(_components)/settingsComponent/Debug.tsx"
 
 export const handler: Handlers = {
   GET(req, ctx) {
-    if (getCookies(req.headers).feedSquidAuth !== env.PASSWORD) {
-      const url = new URL(req.url)
-      url.pathname = "/signin"
-      return Response.redirect(url)
-    }
+    if (!isAuthed(req)) return redirect(req, "/signin")
 
     return ctx.render!()
   },

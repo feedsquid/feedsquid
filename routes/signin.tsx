@@ -1,15 +1,12 @@
+import type { Handlers } from "$fresh/server.ts"
+
+import { isAuthed, redirect } from "~/util.ts"
+
 import { Head } from "$fresh/runtime.ts"
-import { Handlers } from "$fresh/server.ts"
-import { getCookies } from "$std/http/cookie.ts"
-import { env } from "~/env.ts"
 
 export const handler: Handlers = {
   GET(req, ctx) {
-    if (getCookies(req.headers).feedSquidAuth === env.PASSWORD) {
-      const url = new URL(req.url)
-      url.pathname = "/"
-      return Response.redirect(url)
-    }
+    if (isAuthed(req)) return redirect(req, "/")
 
     return ctx.render!()
   },
