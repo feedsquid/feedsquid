@@ -4,10 +4,10 @@ import { env } from "~/env.ts"
 
 import { Head } from "$fresh/runtime.ts"
 import FaArrowLeft from "@preact-icons/fa/FaArrowLeft"
-import Account from "~/routes/settings/(_components)/Account.tsx"
-import Theme from "~/routes/settings/(_components)/Theme.tsx"
-import Language from "~/routes/settings/(_components)/Language.tsx"
-import Debug from "~/routes/settings/(_components)/Debug.tsx"
+import Account from "~/routes/settings/(_components)/settingsComponent/Account.tsx"
+import Theme from "~/routes/settings/(_components)/settingsComponent/Theme.tsx"
+import Language from "~/routes/settings/(_components)/settingsComponent/Language.tsx"
+import Debug from "~/routes/settings/(_components)/settingsComponent/Debug.tsx"
 
 export const handler: Handlers = {
   GET(req, ctx) {

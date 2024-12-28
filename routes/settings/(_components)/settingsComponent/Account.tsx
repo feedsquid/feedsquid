@@ -1,9 +1,10 @@
 import FaSignOutAlt from "@preact-icons/fa/FaSignOutAlt"
+import SettingsTitle from "~/routes/settings/(_components)/SettingsTitle.tsx"
 
 export default () => {
   return (
     <>
-      <h2 class="font-black text-3xl mt-6 mb-2">Account</h2>
+      <SettingsTitle>Account</SettingsTitle>
 
       <form
         method="get"

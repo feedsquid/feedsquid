@@ -1,6 +1,8 @@
 import duckdb from "@duckdb/node-api"
 import deps from "~/deno.json" with { type: "json" }
 
+import SettingsTitle from "~/routes/settings/(_components)/SettingsTitle.tsx"
+
 export default () => {
   const versions = {
     feedSquid: deps.version,
@@ -13,7 +15,7 @@ export default () => {
 
   return (
     <>
-      <h2 class="font-black text-3xl mt-6 mb-2">Debug</h2>
+      <SettingsTitle>Debug</SettingsTitle>
 
       <table>
         <thead>
