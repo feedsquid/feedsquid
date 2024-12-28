@@ -1,4 +1,6 @@
 import type { Handlers } from "$fresh/server.ts"
+import type { JSX } from "preact"
+
 import { getCookies } from "$std/http/cookie.ts"
 import { asset } from "$fresh/runtime.ts"
 import { env } from "~/env.ts"
@@ -19,6 +21,24 @@ export const handler: Handlers = {
   },
 }
 
+function NavButton(
+  props:
+    & { icon: typeof FaBookmark }
+    & JSX.AnchorHTMLAttributes<HTMLAnchorElement>,
+) {
+  const { icon, ...anchorProps } = props
+  const Icon = icon
+
+  return (
+    <a
+      {...anchorProps}
+      class="flex items-center justify-center size-10 rounded hover:bg-slate-800"
+    >
+      <Icon size={16} color="white" />
+    </a>
+  )
+}
+
 export default () => {
   return (
     <>
@@ -28,7 +48,7 @@ export default () => {
             <img width="32" src={asset("/logo.svg")} />
             <span class="font-black text-2xl">feedSquid</span>
           </div>
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-1">
             <form>
               <input
                 disabled
@@ -38,18 +58,8 @@ export default () => {
                 class="p-1 rounded"
               />
             </form>
-            <a
-              href="/bookmarks"
-              class="flex items-center justify-center size-10 rounded hover:bg-slate-800"
-            >
-              <FaBookmark size={16} color="white" />
-            </a>
-            <a
-              href="/settings"
-              class="flex items-center justify-center size-10 rounded hover:bg-slate-800"
-            >
-              <FaCog size={16} color="white" />
-            </a>
+            <NavButton href="/bookmarks" icon={FaBookmark} />
+            <NavButton href="/settings" icon={FaCog} />
           </div>
         </div>
       </nav>
