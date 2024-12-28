@@ -6,6 +6,7 @@ import { asset } from "$fresh/runtime.ts"
 import { env } from "~/env.ts"
 
 import FaBookmark from "@preact-icons/fa/FaBookmark"
+import FaTag from "@preact-icons/fa/FaTag"
 import FaCog from "@preact-icons/fa/FaCog"
 import { FeedItem } from "~/components/FeedItem.tsx"
 
@@ -59,6 +60,7 @@ export default () => {
               />
             </form>
             <NavButton href="/bookmarks" icon={FaBookmark} />
+            <NavButton href="/tags" icon={FaTag} />
             <NavButton href="/settings" icon={FaCog} />
           </div>
         </div>

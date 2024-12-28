@@ -10,6 +10,7 @@ import * as $bookmarks_index from "./routes/bookmarks/index.tsx"
 import * as $index from "./routes/index.tsx"
 import * as $settings_index from "./routes/settings/index.tsx"
 import * as $signin from "./routes/signin.tsx"
+import * as $tags_index from "./routes/tags/index.tsx"
 
 import type { Manifest } from "$fresh/server.ts"
 
@@ -23,6 +24,7 @@ const manifest = {
     "./routes/index.tsx": $index,
     "./routes/settings/index.tsx": $settings_index,
     "./routes/signin.tsx": $signin,
+    "./routes/tags/index.tsx": $tags_index,
   },
   islands: {},
   baseUrl: import.meta.url,
