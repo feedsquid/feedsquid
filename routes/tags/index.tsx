@@ -6,6 +6,7 @@ import { HTTPStatus, isAuthed, redirect } from "~/util.ts"
 
 import { Head } from "$fresh/runtime.ts"
 import FaArrowLeft from "@preact-icons/fa/FaArrowLeft"
+import { Main } from "~/components/Main.tsx"
 
 interface Data {
   tags: Tag[]
@@ -44,9 +45,9 @@ export default ({ data }: PageProps<Data>) => {
         <h1 class="font-black text-2xl">Tags</h1>
       </nav>
 
-      <main class="w-full max-w-5xl mx-auto mt-12">
+      <Main>
         {JSON.stringify(tags)}
-      </main>
+      </Main>
     </>
   )
 }

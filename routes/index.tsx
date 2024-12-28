@@ -8,6 +8,7 @@ import FaBookmark from "@preact-icons/fa/FaBookmark"
 import FaTag from "@preact-icons/fa/FaTag"
 import FaCog from "@preact-icons/fa/FaCog"
 import { FeedItem } from "~/components/FeedItem.tsx"
+import { Main } from "~/components/Main.tsx"
 
 export const handler: Handlers = {
   GET(req, ctx) {
@@ -61,11 +62,11 @@ export default () => {
         </div>
       </nav>
 
-      <main class="w-full max-w-5xl mx-auto mt-12">
+      <Main>
         <FeedItem feedName="name">
           <div>content</div>
         </FeedItem>
-      </main>
+      </Main>
     </>
   )
 }

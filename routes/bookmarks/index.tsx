@@ -4,6 +4,7 @@ import { isAuthed, redirect } from "~/util.ts"
 
 import { Head } from "$fresh/runtime.ts"
 import FaArrowLeft from "@preact-icons/fa/FaArrowLeft"
+import { Main } from "~/components/Main.tsx"
 
 export const handler: Handlers = {
   GET(req, ctx) {
@@ -27,8 +28,8 @@ export default () => {
         <h1 class="font-black text-2xl">Bookmarks</h1>
       </nav>
 
-      <main class="w-full max-w-5xl mx-auto">
-      </main>
+      <Main>
+      </Main>
     </>
   )
 }

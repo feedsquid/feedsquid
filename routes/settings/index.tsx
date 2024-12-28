@@ -8,6 +8,7 @@ import Account from "~/routes/settings/(_components)/settingsComponent/Account.t
 import Theme from "~/routes/settings/(_components)/settingsComponent/Theme.tsx"
 import Language from "~/routes/settings/(_components)/settingsComponent/Language.tsx"
 import Debug from "~/routes/settings/(_components)/settingsComponent/Debug.tsx"
+import { Main } from "~/components/Main.tsx"
 
 export const handler: Handlers = {
   GET(req, ctx) {
@@ -31,12 +32,12 @@ export default () => {
         <h1 class="font-black text-2xl">Settings</h1>
       </nav>
 
-      <main class="w-full max-w-5xl mx-auto">
+      <Main>
         <Account />
         <Theme />
         <Language />
         <Debug />
-      </main>
+      </Main>
     </>
   )
 }

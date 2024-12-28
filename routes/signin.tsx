@@ -18,6 +18,7 @@ export default () => {
       <Head>
         <title>feedSquid | Login</title>
       </Head>
+
       <form
         class="flex size-full items-center justify-center"
         method="post"
