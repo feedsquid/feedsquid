@@ -39,7 +39,7 @@ export default () => {
               />
             </form>
             <a
-              href="/settings"
+              href="/bookmarks"
               class="flex items-center justify-center size-10 rounded hover:bg-slate-800"
             >
               <FaBookmark size={16} color="white" />
