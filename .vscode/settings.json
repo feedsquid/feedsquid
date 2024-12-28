@@ -64,10 +64,11 @@
     "devenv",
     "direnv",
     "duckdb",
+    "feedSquid",
     "nixd",
     "nixfmt",
     "pkgs",
-    "feedSquid",
+    "stdenv",
     "UTINYINT"
   ]
 }
