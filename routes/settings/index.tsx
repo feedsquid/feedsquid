@@ -9,6 +9,7 @@ import Theme from "~/routes/settings/(_components)/settingsComponent/Theme.tsx"
 import Language from "~/routes/settings/(_components)/settingsComponent/Language.tsx"
 import Debug from "~/routes/settings/(_components)/settingsComponent/Debug.tsx"
 import { Main } from "~/components/Main.tsx"
+import About from "~/routes/settings/(_components)/settingsComponent/About.tsx"
 
 export const handler: Handlers = {
   GET(req, ctx) {
@@ -37,6 +38,7 @@ export default () => {
         <Theme />
         <Language />
         <Debug />
+        <About />
       </Main>
     </>
   )
