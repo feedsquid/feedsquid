@@ -20,16 +20,20 @@
 ## feedSquid is ...
 
 - a feed & bookmark manager
+- web-based
 - self-hosted
 - single-user
 - open-source
 - **NOT** just a RSS reader
+- the best way to manage online content consumption
 
 ## Key features
 
 - tag-based organization
 - responsive design
 - full mouse, keyboard, and touch navigation
+- OPML import / export
+- [RSSHub](https://github.com/DIYgod/RSSHub) integration
 
 ## Comparison with other web-based software
 
