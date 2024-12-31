@@ -6,7 +6,6 @@ import * as $_404 from "./routes/_404.tsx"
 import * as $_app from "./routes/_app.tsx"
 import * as $api_auth_signin from "./routes/api/auth/signin.ts"
 import * as $api_auth_signout from "./routes/api/auth/signout.ts"
-import * as $bookmarks_index from "./routes/bookmarks/index.tsx"
 import * as $index from "./routes/index.tsx"
 import * as $settings_index from "./routes/settings/index.tsx"
 import * as $signin from "./routes/signin.tsx"
@@ -20,7 +19,6 @@ const manifest = {
     "./routes/_app.tsx": $_app,
     "./routes/api/auth/signin.ts": $api_auth_signin,
     "./routes/api/auth/signout.ts": $api_auth_signout,
-    "./routes/bookmarks/index.tsx": $bookmarks_index,
     "./routes/index.tsx": $index,
     "./routes/settings/index.tsx": $settings_index,
     "./routes/signin.tsx": $signin,

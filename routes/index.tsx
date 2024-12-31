@@ -4,7 +4,6 @@ import type { JSX } from "preact"
 import { asset } from "$fresh/runtime.ts"
 import { isAuthed, redirect } from "~/util.ts"
 
-import FaBookmark from "@preact-icons/fa/FaBookmark"
 import FaTag from "@preact-icons/fa/FaTag"
 import FaCog from "@preact-icons/fa/FaCog"
 import { FeedItem } from "~/components/FeedItem.tsx"
@@ -20,7 +19,7 @@ export const handler: Handlers = {
 
 function NavButton(
   props:
-    & { icon: typeof FaBookmark }
+    & { icon: typeof FaTag }
     & JSX.AnchorHTMLAttributes<HTMLAnchorElement>,
 ) {
   const { icon, ...anchorProps } = props
@@ -55,7 +54,6 @@ export default () => {
                 class="p-1 rounded"
               />
             </form>
-            <NavButton href="/bookmarks" icon={FaBookmark} />
             <NavButton href="/tags" icon={FaTag} />
             <NavButton href="/settings" icon={FaCog} />
           </div>

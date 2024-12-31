@@ -19,7 +19,7 @@
 
 ## feedSquid is ...
 
-- a feed & bookmark manager
+- a feed manager
 - web-based
 - self-hosted
 - single-user

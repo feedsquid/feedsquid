@@ -14,14 +14,6 @@ export async function initDB() {
     instance = await DuckDBInstance.create("feedsquid.duckdb")
     connection = await instance.connect()
 
-    await connection.run(`CREATE TABLE IF NOT EXISTS bookmarks (
-    id     VARCHAR(${ID_SIZE}) PRIMARY KEY, -- bookmark nanoid
-    name   TEXT NOT NULL,                   -- name of the bookmark
-    parent VARCHAR(${ID_SIZE}),             -- nanoID of the parent bookmark
-    url    TEXT CHECK (url != ''),          -- URL of the bookmark. Can not be empty string (use NULL instead).
-    tags   VARCHAR(${ID_SIZE})[],           -- tag nanoIDs
-);`)
-
     await connection.run(`CREATE TABLE IF NOT EXISTS tags (
   id     VARCHAR(${ID_SIZE}) PRIMARY KEY, -- tag nanoid
   name   TEXT NOT NULL,                   -- name of the tag
