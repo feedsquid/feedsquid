@@ -9,8 +9,12 @@
 </a>
 
 [![discord server invite](https://dcbadge.limes.pink/api/server/gvKhMuT35v)](https://discord.gg/gvKhMuT35v)
-[![contributing](https://img.shields.io/badge/contributing-yellow?style=for-the-badge)](./CONTRIBUTING.md)
-[![license](https://img.shields.io/github/license/feedSquid/feedSquid?style=for-the-badge&color=yellow)](./LICENSE)
+
+<p align="center">
+    <a href="docs/installation.md">Installation</a> •
+    <a href="docs/dev.md">Development</a> •
+    <a href="CONTRIBUTING.md">Contribution guide</a>
+</p>
 
 > [!IMPORTANT]
 > feedSquid is in 🚧**pre-alpha**🚧 stage of
