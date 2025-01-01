@@ -36,6 +36,7 @@
 - tag-based organization
 - responsive design
 - full mouse, keyboard, and touch navigation
+- built with a11y in mind
 - OPML import / export
 - [RSSHub](https://github.com/DIYgod/RSSHub) integration
 
