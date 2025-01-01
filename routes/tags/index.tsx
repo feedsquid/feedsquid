@@ -7,6 +7,7 @@ import { HTTPStatus, isAuthed, redirect } from "~/util.ts"
 import { Head } from "$fresh/runtime.ts"
 import FaArrowLeft from "@preact-icons/fa/FaArrowLeft"
 import { Main } from "~/components/Main.tsx"
+import { Navbar, NavButton } from "~/components/Navbar.tsx"
 
 interface Data {
   tags: Tag[]
@@ -38,12 +39,10 @@ export default ({ data }: PageProps<Data>) => {
         <title>feedSquid | Tags</title>
       </Head>
 
-      <nav class="flex items-center mx-auto w-full max-w-5xl p-2 gap-2">
-        <a href="/" class="flex items-center p-3 hover:bg-slate-800 rounded">
-          <FaArrowLeft />
-        </a>
+      <Navbar justify="normal">
+        <NavButton href="/" title="Go back to home" icon={FaArrowLeft} />
         <h1 class="font-black text-2xl">Tags</h1>
-      </nav>
+      </Navbar>
 
       <Main>
         {JSON.stringify(tags)}

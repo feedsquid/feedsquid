@@ -10,6 +10,8 @@ import Language from "~/routes/settings/(_components)/settingsComponent/Language
 import Debug from "~/routes/settings/(_components)/settingsComponent/Debug.tsx"
 import { Main } from "~/components/Main.tsx"
 import About from "~/routes/settings/(_components)/settingsComponent/About.tsx"
+import { NavButton } from "~/components/Navbar.tsx"
+import { Navbar } from "~/components/Navbar.tsx"
 
 export const handler: Handlers = {
   GET(req, ctx) {
@@ -26,12 +28,10 @@ export default () => {
         <title>feedSquid | Settings</title>
       </Head>
 
-      <nav class="flex items-center mx-auto w-full max-w-5xl p-2 gap-2">
-        <a href="/" class="flex items-center p-3 hover:bg-slate-800 rounded">
-          <FaArrowLeft />
-        </a>
+      <Navbar justify="normal">
+        <NavButton href="/" title="Go back to home" icon={FaArrowLeft} />
         <h1 class="font-black text-2xl">Settings</h1>
-      </nav>
+      </Navbar>
 
       <Main>
         <Account />

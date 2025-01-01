@@ -1,5 +1,4 @@
 import type { Handlers } from "$fresh/server.ts"
-import type { JSX } from "preact"
 
 import { asset } from "$fresh/runtime.ts"
 import { isAuthed, redirect } from "~/util.ts"
@@ -8,6 +7,7 @@ import FaTag from "@preact-icons/fa/FaTag"
 import FaCog from "@preact-icons/fa/FaCog"
 import { FeedItem } from "~/components/FeedItem.tsx"
 import { Main } from "~/components/Main.tsx"
+import { Navbar, NavButton } from "~/components/Navbar.tsx"
 
 export const handler: Handlers = {
   GET(req, ctx) {
@@ -17,48 +17,34 @@ export const handler: Handlers = {
   },
 }
 
-function NavButton(
-  props:
-    & { icon: typeof FaTag }
-    & JSX.AnchorHTMLAttributes<HTMLAnchorElement>,
-) {
-  const { icon, ...anchorProps } = props
-  const Icon = icon
-
-  return (
-    <a
-      {...anchorProps}
-      class="flex items-center justify-center size-10 rounded hover:bg-slate-800"
-    >
-      <Icon size={16} color="white" />
-    </a>
-  )
-}
-
 export default () => {
   return (
     <>
-      <nav class="flex w-full justify-center">
-        <div class="flex items-center justify-between p-2 w-full h-16 max-w-5xl">
-          <div class="flex items-center">
-            <img width="32" src={asset("/logo.svg")} />
-            <span class="font-black text-2xl">feedSquid</span>
-          </div>
-          <div class="flex items-center gap-1">
-            <form>
-              <input
-                disabled
-                type="search"
-                name="search"
-                placeholder="WIP"
-                class="p-1 rounded"
-              />
-            </form>
-            <NavButton href="/tags" icon={FaTag} />
-            <NavButton href="/settings" icon={FaCog} />
-          </div>
+      <Navbar>
+        <div class="flex items-center">
+          <img
+            alt="feedSquid logo showing a monochrome image of a cute squid"
+            width="32"
+            src={asset("/logo.svg")}
+          />
+          <span class="font-black text-xl select-none">feedSquid</span>
         </div>
-      </nav>
+
+        <div class="flex items-center gap-1">
+          <form>
+            <input
+              disabled
+              title="Search"
+              type="search"
+              name="search"
+              placeholder="WIP"
+              class="p-1 rounded"
+            />
+          </form>
+          <NavButton title="Manage tags" href="/tags" icon={FaTag} />
+          <NavButton title="Settings" href="/settings" icon={FaCog} />
+        </div>
+      </Navbar>
 
       <Main>
         <FeedItem feedName="name">
